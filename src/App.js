@@ -18,7 +18,7 @@ class App extends Component {
   deleteTodo(index) {
     console.log(index)
     var todos = this.state.todos.slice();
-    const activeTodos = todos.filter((todo,i) => i !== index)
+    var activeTodos = todos.filter((todo,i) => i !== index)
     this.setState({ todos: activeTodos });
   }
 
