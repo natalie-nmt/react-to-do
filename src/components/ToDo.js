@@ -6,7 +6,7 @@ import React, { Component } from 'react';
       <form>
         <input type="checkbox" checked={ this.props.isCompleted } onChange={ this.props.toggleComplete } />
         <span>{ this.props.description } </span>
-        <button onClick={ this.props.deleteTodo }>delete</button>
+        <input type="button" value="Delete Item" onClick={ this.props.deleteTodo }/>
       </form>
      );
    }

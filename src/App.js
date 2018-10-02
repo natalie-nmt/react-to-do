@@ -16,9 +16,8 @@ class App extends Component {
   }
   
   deleteTodo(index) {
-    console.log(index)
-    var todos = this.state.todos.slice();
-    var activeTodos = todos.filter((todo,i) => i !== index)
+    console.log(index);
+    const activeTodos = this.state.todos.filter(todo => todo !== this.state.todos[index]);
     this.setState({ todos: activeTodos });
   }
 
@@ -30,7 +29,6 @@ class App extends Component {
     e.preventDefault();
     if (!this.state.newTodoDescription) { return }
     const newTodo = { description: this.state.newTodoDescription, isCompleted: false };
-    this.setState({ todos: [...this.state.todos, newTodo] });
     this.setState({ todos: [...this.state.todos, newTodo], newTodoDescription: '' });
   }
 
